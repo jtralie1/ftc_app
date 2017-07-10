@@ -1,12 +1,16 @@
-package com.qualcomm.ftcrobotcontroller.opmodes;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 /**
  * Created by UDRI1 on 7/28/2016.
- */  Simple Tank Drive Program
-public class SimpleDrive extends OpMode {
+  Simple Tank Drive Program
+ */
+public class SimpleDrive extends OpMode{
     // Declare Motor Variables
     DcMotor leftmotor;
     DcMotor rightmotor;
@@ -34,11 +38,12 @@ public class SimpleDrive extends OpMode {
         telemetry.addData
                 ( "01"
                         , "Left Drive: "
-                                + leftY
+                                + leftY);
+
+        telemetry.addData
+                ("02"
+                        , "Right Drive: "
+                                + rightY
                 );
-        ( "02"
-                , "Right Drive: "
-                + rightY
-        );
     }
 }

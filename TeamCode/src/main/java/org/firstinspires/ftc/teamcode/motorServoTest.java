@@ -1,6 +1,10 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.Servo;
+
+
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Servo;
@@ -10,8 +14,10 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 /**
  * Created by UDRI1 on 10/5/2016.
  */
+
 @TeleOp(name = "motorServoTest", group = "Test")
-public class motorServoTest extends OpMode{
+
+public class motorServoTest extends OpMode {
     Servo open;
    // Servo close;
    // DcMotor testMotor;

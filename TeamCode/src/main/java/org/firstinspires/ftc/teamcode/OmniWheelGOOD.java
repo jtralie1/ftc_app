@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 /**
  * Created by UDRI1 on 7/28/2016.
  *  Simple Tank Drive Program*/
-@TeleOp(name = "omniWheel1", group = "Test")
+@TeleOp(name = "omniWheelG", group = "Test")
 public class OmniWheelGOOD extends OpMode {
     // Declare Motor Variables
 

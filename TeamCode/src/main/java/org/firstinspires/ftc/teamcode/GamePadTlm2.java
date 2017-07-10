@@ -1,11 +1,14 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 /**
  * Created by UDRI1 on 7/28/2016.
- */ Used to check the functionality of the GamePad
+  Used to check the functionality of the GamePad
+ */
+@TeleOp(name = "GamePadTlm2", group = "Test")
 public class GamePadTlm2 extends OpMode {
 
     @Override
