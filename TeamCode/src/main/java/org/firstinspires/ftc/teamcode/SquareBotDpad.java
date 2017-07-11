@@ -7,8 +7,8 @@ import com.qualcomm.robotcore.hardware.DcMotor;
  * Created by UDRI1 on 2/8/2017.
  */
 
-@TeleOp(name = "SquareBotOp", group = "test")
-public class SquareBotOp extends OpMode{
+@TeleOp(name = "SquareBotDPad", group = "test")
+public class SquareBotDpad extends OpMode{
 
     DcMotor br;
     DcMotor fr;
@@ -28,19 +28,41 @@ public class SquareBotOp extends OpMode{
 
     public void loop(){
 
-        float leftY = gamepad1.left_stick_y;
-        float rightY = gamepad1.right_stick_y;
+        boolean forward = gamepad1.dpad_up;
+        boolean backward = gamepad1.dpad_down;
+        boolean left = gamepad1.dpad_left;
+        boolean right = gamepad1.dpad_right;
 
-        if(leftY > .3){
+        if(forward){
+            fl.setPower(-1);
+            fr.setPower(-1);
+            br.setPower(-1);
+            bl.setPower(-1);
+        }
+
+        else if(backward){
 
             fl.setPower(1);
+            fr.setPower(1);
+            br.setPower(1);
             bl.setPower(1);
 
         }
 
-        else if(leftY < -.3){
+        else if(left){
+
+            fl.setPower(1);
+            fr.setPower(-1);
+            br.setPower(-1);
+            bl.setPower(1);
+
+        }
+
+        else if(right){
 
             fl.setPower(-1);
+            fr.setPower(1);
+            br.setPower(1);
             bl.setPower(-1);
 
         }
@@ -48,28 +70,9 @@ public class SquareBotOp extends OpMode{
         else{
 
             fl.setPower(0);
-            bl.setPower(0);
-
-        }
-
-        if(rightY > .3){
-
-            fr.setPower(1);
-            br.setPower(1);
-
-        }
-
-        else if(rightY < -.3){
-
-            fr.setPower(-1);
-            br.setPower(-1);
-
-        }
-
-        else{
-
             fr.setPower(0);
             br.setPower(0);
+            bl.setPower(0);
 
         }
 
